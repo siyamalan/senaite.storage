@@ -76,7 +76,7 @@
                     combogrid_options='{
                       "colModel": [
                         {"columnName": "getId", "align": "left", "label": "Id", "width": "15"},
-                        {"columnName": "getClientSampleID", "align": "left", "label": "CSID", "width": "15"},
+                        {"columnName": "getClientSampleID", "align": "left", "label": "BlendID", "width": "15"},
                         {"columnName": "getSampleTypeTitle", "align": "left", "label": "Sample Type", "width": "70"},
                         {"columnName": "UID", "hidden": true}],
                       "search_fields": ["getId"],
@@ -177,6 +177,7 @@
                       <td tal:condition="python: item and True or False"
                           class="non-empty-slot">
                         <div class="sample-id font-weight-bold text-center" tal:content="python: item.getId()"></div>
+                             <div class="sample-type small text-center" tal:content="python: item.getClientSampleID()"></div>
                         <div class="sample-type small text-center" tal:content="python: item.getSampleTypeTitle()"></div>
                         <div class="slot-bottom">
                           <div class="col-sm-6 small text-left" tal:content="python:alpha"></div>
